@@ -10,7 +10,7 @@ jobs:
           curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
           ./bin/micromamba create -r ~/micromamba -n py38 -c conda-forge python=3.8 --yes
           ./bin/micromamba run -r ~/micromamba -n py38 pip install -r src/requirements.txt
-          ./bin/micromamba run -r ~/micromamba -n py38 pyinstaller -F src/ProtonClient.py
+          ./bin/micromamba run -r ~/micromamba -n py38 pyinstaller --onefile --noconsole --icon=Assets/Proton_Logo.ico src/ProtonClient.py
 
       - name: Set release date
         run: echo "RELEASE_DATE=$(date -u +%Y.%m.%d)" >> ${GITHUB_ENV}
@@ -35,7 +35,7 @@ jobs:
           python-version: '3.8'
       - run: |
           python -m pip install -r src/requirements.txt
-          python -m PyInstaller -F src/ProtonClient.py
+          python -m PyInstaller --onefile --noconsole --icon=Assets/Proton_Logo.ico src/ProtonClient.py
 
       - name: Set release date
         shell: bash
