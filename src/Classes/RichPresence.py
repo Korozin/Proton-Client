@@ -43,7 +43,7 @@ class ProtonClientRPC:
                     large_text="Created By: KorOwOzin",
                     small_image=small_image,
                     small_text=small_text,
-                    buttons=[{"label": "Download Proton Client", "url": "https://example.com"}],
+                    buttons=[{"label": "Download Proton Client", "url": "https://github.com/Korozin/Proton-Client/releases/latest"}],
                     start=self.start_time
                 )
 
