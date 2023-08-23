@@ -20,7 +20,7 @@ jobs:
         with:
           name: ${{ env.RELEASE_DATE }}
           tag:  ${{ env.RELEASE_DATE }}
-          artifacts: "dist/JSONConvert"
+          artifacts: "dist/ProtonClient"
           token: ${{ secrets.TEST_TOKEN }}
           allowUpdates: true
           draft: true
@@ -46,7 +46,7 @@ jobs:
         with:
           name: ${{ env.RELEASE_DATE }}
           tag:  ${{ env.RELEASE_DATE }}
-          artifacts: "dist/JSONConvert.exe"
+          artifacts: "dist/ProtonClient.exe"
           token: ${{ secrets.TEST_TOKEN }}
           allowUpdates: true
           draft: true
