@@ -147,7 +147,7 @@ class ProtonClient_Main(QtWidgets.QMainWindow, ProtonClient_GUI.Ui_MainWindow):
 
         for line in lines:
             address, value = line.split()
-            self.tcp_con.kernelWrite(address, value)
+            self.tcp_con.kernelWrite(int(address), int(value))
 
 
     def Slider_Kernel_Write(self, level, slider_type):
